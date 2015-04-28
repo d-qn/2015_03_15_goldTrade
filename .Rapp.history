@@ -1,0 +1,776 @@
+## {title: MultiBar Chart}#
+hair_eye = as.data.frame(HairEyeColor)#
+p2 <- nPlot(Freq ~ Hair, group = 'Eye', data = subset(hair_eye, Sex == "Female"), type = 'multiBarChart')#
+p2$chart(color = c('brown', 'blue', '#594c26', 'green'))#
+p2#
+## {title: MultiBar Horizontal Chart}#
+p3 <- nPlot(~ cyl, group = 'gear', data = mtcars, type = 'multiBarHorizontalChart')#
+p3$chart(showControls = F)#
+p3#
+## {title: Pie Chart}#
+p4 <- nPlot(~ cyl, data = mtcars, type = 'pieChart')#
+p4#
+## {title: Donut Chart}#
+p5 <- nPlot(~ cyl, data = mtcars, type = 'pieChart')#
+p5$chart(donut = TRUE)#
+p5#
+## {title: Line Chart}#
+data(economics, package = 'ggplot2')#
+p6 <- nPlot(uempmed ~ date, data = economics, type = 'lineChart')#
+p6#
+## {title: Line with Focus Chart }#
+ecm <- reshape2::melt(economics[,c('date', 'uempmed', 'psavert')], id = 'date')#
+p7 <- nPlot(value ~ date, group = 'variable', data = ecm, type = 'lineWithFocusChart')#
+#test format dates on the xAxis#
+#also good test of javascript functions as parameters#
+#dates from R to JSON will come over as number of days since 1970-01-01#
+#so convert to milliseconds 86400000 in a day and then format with d3#
+#on lineWithFocusChart type xAxis will also set x2Axis unless it is specified#
+p7$xAxis( tickFormat="#!function(d) {return d3.time.format('%b %Y')(new Date( d * 86400000 ));}!#" )#
+#test xAxis also sets x2Axis#
+p7#
+#now test setting x2Axis to something different#
+#test format dates on the x2Axis#
+#test to show %Y format which is different than xAxis#
+p7$x2Axis( tickFormat="#!function(d) {return d3.time.format('%Y')(new Date( d * 86400000 ));}!#" )#
+p7#
+#test set xAxis again to make sure it does not override set x2Axis#
+p7$xAxis( NULL, replace = T)#
+p7
+require( rCharts )
+?options
+require( rCharts )#
+options(RCHART_TEMPLATE = 'Rickshaw.html')#
+#specify the data#
+data = data.frame(#
+  c( 0, 1, 2, 3 ),#
+  c( 40, 49, 17, 42 ),#
+  stringsAsFactors = FALSE#
+)#
+colnames(data) <- c("x","y")#
+#build the plot#
+r1 <- Rickshaw$new()#
+r1$layer(#
+  y ~ x,#
+  data = data,#
+  type = "area",#
+  colors= "steelblue",#
+  height = 240,#
+  width = 540#
+)#
+#turn off all the nice built in features#
+#to match the sparse first example#
+r1$set(#
+  hoverDetail = FALSE,#
+  xAxis = FALSE,#
+  yAxis = FALSE,#
+  shelving = FALSE,#
+  legend = FALSE,#
+  slider = FALSE,#
+  highlight = FALSE#
+)#
+#r1
+r1
+# Example 2#
+require(rCharts)#
+# options(RCHART_TEMPLATE = 'Rickshaw.html')#
+require(RColorBrewer)#
+data(economics, package = 'ggplot2')#
+datm = reshape2::melt(#
+  economics[,c('date', 'psavert', 'uempmed')],#
+  id = 'date'#
+)#
+datm <- transform(datm, date = to_jsdate(date))#
+p2 <- Rickshaw$new()#
+p2$layer(value ~ date, group = 'variable', data = datm, type = 'line', #
+  colors = c("darkred", "darkslategrey"))
+p2
+to_jsdate <- function(date_){#
+  val = as.POSIXct(as.Date(date_),origin="1970-01-01")#
+  as.numeric(val)#
+}#
+p3 <- Rickshaw$new()#
+p3$layer(Employed ~ Year, data = longley, type = 'line', colors = c('darkred'))#
+#
+usp = reshape2::melt(USPersonalExpenditure)#
+p4 <- Rickshaw$new()#
+p4$layer(value ~ Var2, group = 'Var1', data = usp, type = 'area')#
+p4$show(T)#
+#
+dat <- yaml::yaml.load('[ { x: 0, y: 40 }, { x: 1, y: 49 }, { x: 2, y: 17 }, { x: 3, y: 42 } ]')#
+#
+dat <- data.frame(#
+  x = c(0, 1, 2, 3),#
+  y = c(40, 49, 2, 17)#
+)
+# Example 1#
+p1 <- Rickshaw$new()#
+p1$layer(~ cyl, group = 'am', data = mtcars, type = 'bar')#
+#
+# Example 2#
+require(rCharts)#
+# options(RCHART_TEMPLATE = 'Rickshaw.html')#
+require(RColorBrewer)#
+data(economics, package = 'ggplot2')#
+datm = reshape2::melt(#
+  economics[,c('date', 'psavert', 'uempmed')],#
+  id = 'date'#
+)#
+datm <- transform(datm, date = to_jsdate(date))#
+p2 <- Rickshaw$new()#
+p2$layer(value ~ date, group = 'variable', data = datm, type = 'line', #
+  colors = c("darkred", "darkslategrey"))
+p2
+to_jsdate <- function(date_){#
+  val = as.POSIXct(as.Date(date_),origin="1970-01-01")#
+  as.numeric(val)#
+}#
+p3 <- Rickshaw$new()#
+p3$layer(Employed ~ Year, data = longley, type = 'line', colors = c('darkred'))#
+#
+usp = reshape2::melt(USPersonalExpenditure)#
+p4 <- Rickshaw$new()#
+p4$layer(value ~ Var2, group = 'Var1', data = usp, type = 'area')#
+p4$show(T)
+library(pXr)
+library(pXR)
+library(pxR)
+library(pxr)
+library(pXR)
+library(pXr)
+library(pxR)
+library(ggplot2)
+install.packages(pxR)
+install.packages("pxR")
+library(pxR)
+px<- read.px("~/Downloads/ilc_di01.px")
+px
+px<- read.px("~/Downloads/ilc_di01.px")
+?read.px
+px<- read.px("~/Downloads/ilc_di01.px")
+source('https://raw.githubusercontent.com/walkerke/teaching-with-datavis/master/pyramids/rcharts_pyramids.R')
+## Script to generate population pyramids from the Census Bureau's International Database with rCharts ###
+#
+library(XML)#
+library(reshape2)#
+library(rCharts)#
+library(plyr)#
+getAgeTable <- function(country, year) {#
+  c1 <- "http://www.census.gov/population/international/data/idb/region.php?N=%20Results%20&T=10&A=separate&RT=0&Y="  #
+  c2 <- "&R=-1&C="#
+  yrs <- gsub(" ", "", toString(year))#
+  url <- paste0(c1, yrs, c2, country)#
+  df <- data.frame(readHTMLTable(url))#
+  nms <- c("Year", "Age", "total", "Male", "Female", "percent", "pctMale", "pctFemale", "sexratio")  #
+  names(df) <- nms  #
+  cols <- c(1, 3:9)#
+  df[,cols] <- apply(df[,cols], 2, function(x) as.numeric(as.character(gsub(",", "", x))))#
+  df <- df[df$Age != 'Total', ]  #
+  ord <- 1:nrow(df)#
+  df <- cbind(df, ord)#
+  return(df)#
+}
+dPyramid <- function(country, year, colors=NULL) {#
+  dat <- getAgeTable(country, year)#
+  dat$Male <- -1 * dat$Male#
+  keep <- c("Year", "Age", "Male", "Female", "ord")#
+  dat.sub <- dat[,keep]#
+  dat.melt <- melt(dat.sub, #
+                   value.name='Population', #
+                   variable.name = 'Gender', #
+                   id.vars=c('Age', 'ord', 'Year') )#
+  dat.melt$gencode <- ifelse(dat.melt$Gender == 'Male', 1, 2)#
+  d1 <- dPlot(#
+    x = "Population", #
+    y = "Age", #
+    groups = "Gender", #
+    data = dat.melt, #
+    type = 'bar')#
+  d1$yAxis(type = "addCategoryAxis", orderRule = "ord")#
+  d1$xAxis(type = "addMeasureAxis")#
+  d1$legend( x = 60, y = 10, width = 700, height = 20, horizontalAlign = "right")#
+  if (!is.null(colors)){#
+    d1$colorAxis(#
+      type = "addColorAxis", #
+      colorSeries = "gencode", #
+      palette = colors#
+    )#
+  }#
+  if (length(year) > 1) {#
+    d1$set(storyboard = "Year")#
+    max_x <- round_any(max(dat.melt$Population), 10000, f = ceiling)#
+    min_x <- round_any(min(dat.melt$Population), 10000, f = floor)#
+    d1$xAxis(overrideMax = max_x, overrideMin = min_x)#
+  }#
+  if (max(dat.melt$Population >= 1000000)) {#
+    d1$setTemplate( afterScript = #
+                      "#
+                  <script>#
+                    x._getFormat = function () {#
+                    return function(d) {#
+                    return d3.format(',.1f')(Math.abs(d) / 1000000) + 'm';#
+                     };#
+                    };#
+                  myChart.draw()#
+                  </script>#
+                  ")#
+  } else {#
+    d1$setTemplate( afterScript = #
+                      "#
+                  <script>#
+                    x._getFormat = function () {#
+                    return function(d) {#
+                    return d3.format(',.0f')(Math.abs(d) / 1000) + 'k';#
+                     };#
+                    };#
+                  myChart.draw()#
+                  </script>#
+                  ")#
+  }#
+#
+  d1#
+}
+d1
+dPyramid
+dPyramid('GM', seq(2000, 2050, 10), colors = c('black', 'red'))
+# Initialize libraries required#
+library(rCharts)#
+library(reshape2)#
+meansconferences=read.csv("https://raw.github.com/patilv/ESPNBball/master/meansconferences.csv")#
+# Mean statistics for all WCC and Big 12 teams for seasons 2001-2002 through 2012-2013  #
+# mean Points.Per.Game, mean Games.Played, mean Minutes,mean Rebounds.Per.Game, mean Assists.Per.Game, mean Steals.Per.Game,mean Blocks.Per.Game,#
+# mean Turnovers.Per.Game, mean Field.Goal.Percent, mean Free.Throw.Percent, mean Three.Point.FieldGoal.Percent#
+# For more info on how this dataset was generated, #
+# please see blog post at http://analyticsandvisualization.blogspot.com/2013/08/short-tales-of-two-ncaa-basketball.html#
+meltmeansconferences=melt(meansconferences[-c(1,10:14)], id.vars=c("Conference","Year")) # Remove the first irrelevant index column and few additional ones to keep this clean#
+# Horizontal Stacked bars chart 100% Storyboard#
+d1=dPlot(y="Year", x="value",data=meltmeansconferences, groups="variable",type="bar") # looking at the entire data instead of subset#
+d1$yAxis(type="addCategoryAxis", orderRule="Year")#
+d1$xAxis(type="addPctAxis") # instead of addMeasureAxis used in the Horizontal Stacked Bar#
+d1$set(storyboard = "Conference") # chart changes by conference#
+d1$legend(#
+  x = 0,#
+  y = 0,#
+  width = 500,#
+  height = 75,#
+  horizontalAlign = "right"#
+)
+# Initialize libraries required#
+library(rCharts)#
+library(reshape2)#
+meansconferences=read.csv("https://raw.github.com/patilv/ESPNBball/master/meansconferences.csv")
+library(rCharts)#
+library(reshape2)#
+meansconferences=read.csv("https://raw.github.com/patilv/ESPNBball/master/meansconferences.csv")
+require(XML)
+xmlParse("~/swissinfo/2014_07_03_evolutionDeLaPopulationSuisse/Etranger/ink/area_swissVsForeigners copy.svg")
+xml<- xmlParse("~/swissinfo/2014_07_03_evolutionDeLaPopulationSuisse/Etranger/ink/area_swissVsForeigners copy.svg")
+str(xml)
+xml
+?saveXML
+xmlAttrs(xml)
+xml
+xmlSize(r)
+xmlSize(xml)
+xmlName(xml)
+xml[[1]]
+str(xml)
+xm<- xmlParse("~/swissinfo/2014_07_03_evolutionDeLaPopulationSuisse/Etranger/ink/area_swissVsForeigners copy.svg")
+str(xm)
+xm
+xmlRoot(xml)
+xmlRoot(xm)
+test<- xmlRoot(xm)
+str(test)
+xmlAttrs(test)
+xmlName(test)
+test
+xmltop<- xmlRoot(xm)
+xmlName(xmltop)
+xmlSize(xmltop)
+xmlName(xmltop[[1]])
+xmlName(xmltop[[2]])
+xmlName(xmltop[[3]])
+xmlName(xmltop[[4]])
+xmlName(xmltop[[5]])
+xmlInternalTreeParse(xm)
+xmlInternalTreeParse("~/swissinfo/2014_07_03_evolutionDeLaPopulationSuisse/Etranger/ink/area_swissVsForeigners copy.svg")
+xm<- xmlInternalTreeParse("~/swissinfo/2014_07_03_evolutionDeLaPopulationSuisse/Etranger/ink/area_swissVsForeigners copy.svg")
+str(xm)
+?xpathApply
+install.packages("showtext")
+ls()
+sadf
+sadfsadf
+install.packages("eurostat")
+install_github("eurostat", "ropengov")#
+library(eurostat)
+library(devtools)
+install_github("eurostat", "ropengov")#
+library(eurostat)
+toc <- getEurostatTOC();
+getEurostatTOC()
+grepEurostatTOC("childcare")
+remove.packages("eurostat")
+remove.packages("ropengov")
+library(smarterPoland)
+library(SmarterPoland)
+library("SmarterPoland")
+install.packages("SmarterPoland")
+library("SmarterPoland")
+toc <- getEurostatTOC()
+install.packages("eurostat")
+library("eurostat")
+install.packages("datamart")
+library(datamart)
+eurostat()
+eurostat_data)()
+eurostat_data()
+install_github("pbiecek/SmarterPoland")
+library(github)
+library(devtools)
+install_github("pbiecek/SmarterPoland")
+library("SmarterPoland")
+getEurostatTOC()
+toc <- getEurostatTOC()
+toc
+toc <- getEurostatTOC()
+test <- getEurostatTOC()
+test
+source("~/swissinfo/_helpers/helpers.R")
+library(rCharts)#
+#
+a <- rCharts::Highcharts$new()#
+#
+test <- data.frame(x = 1:10, y= 1:10, z=rep(c(5,8),5), name = c("a", "b", "c", "d", "e", "f", "g", "h", "i", "j"),#
+	series = c(rep(c("blob", "poop", "doop"), 3), "asdf"))#
+#
+seriesL <- by(test, test$series, function(df) {#
+	list(#
+		data = lapply(1:nrow(df), function(i) {#
+			list(x = df[i,'x'], y = df[i,'y'], z = df[i,'z'], name = as.character(df[i,'name']))#
+		}),#
+		name = as.character(df$series[1])#
+		)#
+}, simplify = F)#
+## very important: needs to get of the attributes, otherwise highchart will not plot it!#
+attributes(seriesL) <- NULL#
+#
+a$series(seriesL)#
+a$chart(zoomType = "xy", type = "bubble")#
+a$plotOptions(bubble = list(dataLabels = list(enabled = T, style = list(textShadow = 'none') ,#
+	color = '#A9A9A9', formatter = "#! function() { return this.point.name; } !#")))#
+a$tooltip(formatter = "#! function() { return this.point.name + ':' +this.x + ', ' + this.y; } !#")#
+a
+library(swiRcharts)
+?hSeries
+library(swiTheme)#
+a <- rCharts::Highcharts$new()#
+x <- 1:10#
+y <- seq(1, 100, 10)#
+z <- 10:1#
+color <- rep(c("grey", "red"), 2)#
+name <- c("a", "b", "c", "d", "e", "f", "g", "h", "i", "j")#
+series <- c(rep(c("blob", "poop", "doop"), 3), "asdf")#
+a$series(hSeries(x,y,z,name, color, series))#
+#
+# tweak the bubble plot#
+a$chart(zoomType = "xy", type = "bubble")#
+a$plotOptions(bubble = list(dataLabels = list(enabled = T, style = list(textShadow = 'none') ,#
+color = '#aa8959', formatter = "#! function() { return this.point.name; } !#")))#
+#
+a$colors(swi_rpal)#
+a$tooltip(formatter = "#! function() { return this.point.name + ':' +this.x + ', ' + this.y; } !#")#
+a$xAxis(title = list(text = "important indicator", align = "high"), lineColor = list ('#FF0000'))#
+a
+hSeries
+library(swiTheme)
+?hSeries
+?hSerie
+library(swiRcharts)
+?hSeries
+library(swiTheme)#
+a <- rCharts::Highcharts$new()#
+x <- 1:10#
+y <- seq(1, 100, 10)#
+z <- 10:1#
+color <- rep(c("grey", "red"), 2)#
+name <- c("a", "b", "c", "d", "e", "f", "g", "h", "i", "j")#
+series <- c(rep(c("blob", "poop", "doop"), 3), "asdf")#
+a$series(hSeries(x,y,z,name, color, series))#
+#
+# tweak the bubble plot#
+a$chart(zoomType = "xy", type = "bubble")#
+a$plotOptions(bubble = list(dataLabels = list(enabled = T, style = list(textShadow = 'none') ,#
+color = '#aa8959', formatter = "#! function() { return this.point.name; } !#")))#
+#
+a$colors(swi_rpal)#
+a$tooltip(formatter = "#! function() { return this.point.name + ':' +this.x + ', ' + this.y; } !#")#
+a$xAxis(title = list(text = "important indicator", align = "high"), lineColor = list ('#FF0000'))#
+a
+color
+length(x)
+library(swiRcharts)
+library(swiTheme)#
+a <- rCharts::Highcharts$new()#
+x <- 1:10#
+y <- seq(1, 100, 10)#
+z <- 10:1#
+color <- rep(c("grey", "red"), 5)#
+name <- c("a", "b", "c", "d", "e", "f", "g", "h", "i", "j")#
+series <- c(rep(c("blob", "poop", "doop"), 3), "asdf")#
+a$series(hSeries(x,y,z,name, color, series))#
+#
+# tweak the bubble plot#
+a$chart(zoomType = "xy", type = "bubble")#
+a$plotOptions(bubble = list(dataLabels = list(enabled = T, style = list(textShadow = 'none') ,#
+color = '#aa8959', formatter = "#! function() { return this.point.name; } !#")))#
+#
+a$colors(swi_rpal)#
+a$tooltip(formatter = "#! function() { return this.point.name + ':' +this.x + ', ' + this.y; } !#")#
+a$xAxis(title = list(text = "important indicator", align = "high"), lineColor = list ('#FF0000'))#
+a
+library(streamgraph)#
+library(dplyr)#
+ggplot2::movies %>%#
+  select(year, Action, Animation, Comedy, Drama, Documentary, Romance, Short) %>%#
+  tidyr::gather(genre, value, -year) %>%#
+  group_by(year, genre) %>%#
+  tally(wt=value) %>%#
+  streamgraph("genre", "n", "year") %>%#
+  sg_axis_x(20) %>%#
+  sg_colors("PuOr") %>%#
+  sg_legend(show=TRUE, label="Genres: ")
+traceback()
+library(streamgraph)#
+library(dplyr)#
+library(babynames)#
+library(DT)#
+#
+ggplot2::movies %>%#
+  select(year, Action, Animation, Comedy, Drama, Documentary, Romance, Short) %>%#
+  tidyr::gather(genre, value, -year) %>%#
+  group_by(year, genre) %>%#
+  tally(wt=value) %>%#
+  ungroup -> dat#
+#
+streamgraph(dat, "genre", "n", "year", interactive=TRUE) %>%#
+  sg_axis_x(20, "year", "%Y") %>%#
+  sg_colors("PuOr")
+library(streamgraph)#
+#
+# current verison#
+packageVersion("streamgraph")#
+#
+library(dplyr)#
+#
+ggplot2::movies %>%#
+  select(year, Action, Animation, Comedy, Drama, Documentary, Romance, Short) %>%#
+  tidyr::gather(genre, value, -year) %>%#
+  group_by(year, genre) %>%#
+  tally(wt=value) -> dat#
+#
+streamgraph(dat, "genre", "n", "year", interactive=TRUE) %>%#
+  sg_axis_x(20, "year", "%Y") %>%#
+  sg_fill_brewer("PuOr")
+if(require(tm)){#
+	data(SOTU)#
+	corp <- SOTU#
+	corp <- tm_map(corp, removePunctuation)#
+	corp <- tm_map(corp, removePunctuation)#
+	corp <- tm_map(corp, tolower)#
+	corp <- tm_map(corp, removeNumbers)#
+	corp <- tm_map(corp, function(x)removeWords(x,stopwords()))#
+#
+	term.matrix <- TermDocumentMatrix(corp)#
+	term.matrix <- as.matrix(term.matrix)#
+	colnames(term.matrix) <- c("SOTU 2010","SOTU 2011")#
+	comparison.cloud(term.matrix,max.words=40,random.order=FALSE)#
+	commonality.cloud(term.matrix,max.words=40,random.order=FALSE)#
+}
+data(SOTU)#
+	corp <- SOTU#
+	corp <- tm_map(corp, removePunctuation)#
+	corp <- tm_map(corp, removePunctuation)#
+	corp <- tm_map(corp, tolower)#
+	corp <- tm_map(corp, removeNumbers)#
+	corp <- tm_map(corp, function(x)removeWords(x,stopwords()))#
+#
+	term.matrix <- TermDocumentMatrix(corp)#
+	term.matrix <- as.matrix(term.matrix)#
+	colnames(term.matrix) <- c("SOTU 2010","SOTU 2011")#
+	comparison.cloud(term.matrix,max.words=40,random.order=FALSE)#
+	commonality.cloud(term.matrix,max.words=40,random.order=FALSE)
+library(tm)
+data(SOTU)#
+	corp <- SOTU#
+	corp <- tm_map(corp, removePunctuation)#
+	corp <- tm_map(corp, removePunctuation)#
+	corp <- tm_map(corp, tolower)#
+	corp <- tm_map(corp, removeNumbers)#
+	corp <- tm_map(corp, function(x)removeWords(x,stopwords()))#
+#
+	term.matrix <- TermDocumentMatrix(corp)#
+	term.matrix <- as.matrix(term.matrix)#
+	colnames(term.matrix) <- c("SOTU 2010","SOTU 2011")#
+	comparison.cloud(term.matrix,max.words=40,random.order=FALSE)#
+	commonality.cloud(term.matrix,max.words=40,random.order=FALSE)
+library(wordcloud)
+data(SOTU)#
+	corp <- SOTU#
+	corp <- tm_map(corp, removePunctuation)#
+	corp <- tm_map(corp, removePunctuation)#
+	corp <- tm_map(corp, tolower)#
+	corp <- tm_map(corp, removeNumbers)#
+	corp <- tm_map(corp, function(x)removeWords(x,stopwords()))#
+#
+	term.matrix <- TermDocumentMatrix(corp)#
+	term.matrix <- as.matrix(term.matrix)#
+	colnames(term.matrix) <- c("SOTU 2010","SOTU 2011")#
+	comparison.cloud(term.matrix,max.words=40,random.order=FALSE)#
+	commonality.cloud(term.matrix,max.words=40,random.order=FALSE)
+data(SOTU)    corp <- SOTU    corp <- tm_map(corp, removePunctuation)    corp <- tm_map(corp, content_transformer(tolower))    corp <- tm_map(corp, removeNumbers)
+corp <- tm_map(corp, function(x)removeWords(x,stopwords()))  term.matrix <- TermDocumentMatrix(corp)  term.matrix <- as.matrix(term.matrix)  colnames(term.matrix) <- c("SOTU 2010","SOTU 2011")  comparison.cloud(term.matrix,max.words=40,random.order=FALSE)  commonality.cloud(term.matrix,max.words=40,random.order=FALSE)
+library(swiMap)
+?getShpLayers
+require(rgdal)#
+require(rgeos)#
+require(ggplot2)#
+path <- getPathShp('world')#
+layers <- getShpLayers(path)
+formatShp
+library(ggplot2)
+plyr
+?plyr
+?join
+library(swiMap)
+?getShpLayers
+require(rgdal)#
+require(rgeos)#
+require(ggplot2)#
+path <- getPathShp('world')#
+layers <- getShpLayers(path)#
+# read shapefiles for given layer#
+world <- readOGR(path, layer = layers[1])#
+world.df <- formatShp(world)#
+# plot#
+ggplot(world.df, aes(x = long, y = lat, group = group)) + geom_polygon(size = 0.01, aes(fill = FIPS))
+ggplot(world.df, aes(x = long, y = lat, group = group)) + geom_polygon(size = 0.01, aes(fill = FIPS)) + theme_minimal()
+ggplot(world.df, aes(x = long, y = lat, group = group)) + geom_polygon(size = 0.01, aes(fill = FIPS)) + #
+theme_minimal() + theme(legend.position = "none")
+ggplot(world.df, aes(x = long, y = lat, group = group)) + geom_polygon(size = 0.01, aes(fill = FIPS)) + #
+theme_minimal() + theme(legend.position = "none", panel.grid = element_null())
+ggplot(world.df, aes(x = long, y = lat, group = group)) + geom_polygon(size = 0.01, aes(fill = FIPS)) + #
+theme_minimal() + theme(legend.position = "none", panel.grid = element_blank())
+ggplot(world.df, aes(x = long, y = lat, group = group)) + geom_polygon(size = 0.01, aes(fill = FIPS)) + #
+theme_minimal() + theme(legend.position = "none", panel.grid = element_blank(), axis.ticks = element_blank())
+ggplot(world.df, aes(x = long, y = lat, group = group)) + geom_polygon(size = 0.01, aes(fill = FIPS)) + #
+theme_minimal() + theme(legend.position = "none", panel.grid = element_blank(), axis.ticks = element_blank(), axis.title = element_blank())
+ggplot(world.df, aes(x = long, y = lat, group = group)) + geom_polygon(size = 0.01, aes(fill = FIPS)) + #
+theme_minimal() + theme(legend.position = "none", panel.grid = element_blank(), axis.ticks = element_blank(), axis.title = element_blank(), axis.text = element_blank())
+path.ch <- getPathShp('CH')
+path.ch
+getShpLayers(path.ch)
+ch <- readOGR(path.ch, layer = 'municipalities')
+ch.df <- formatShp(ch)
+str(ch.df)
+ggplot(ch.df, aes(x = long, y = lat, group = group)) + geom_polygon(size = 0.01, aes(fill = GEMNAME)) + #
+theme_minimal() + theme(legend.position = "none", panel.grid = element_blank(), axis.ticks = element_blank(), axis.title = element_blank(), axis.text = element_blank())
+lake <- readOGR(path.ch, layer = "lakes")#
+country <- readOGR(path.ch, layer = "country")
+lake.df <- formatShp(readOGR(path.ch, layer = "lakes"))#
+country.df <- formatShp(readOGR(path.ch, layer = "country"))
+alpha
+lake.df <- formatShp(readOGR(path.ch, layer = "lakes"))#
+country.df <- formatShp(readOGR(path.ch, layer = "country"))#
+ch.communes + geom_polygon(data = country.df, fill = NA, size = 0.15) + #
+  geom_polygon(data = lake.df, fill = alpha("lightgrey", alpha = 1), colour = alpha("lightgrey", alpha = 1))
+ch.communes <- ggplot(ch.df, aes(x = long, y = lat, group = group)) + geom_polygon(size = 0.01, aes(fill = GEMNAME)) + #
+theme_minimal() + theme(legend.position = "none", panel.grid = element_blank(), axis.ticks = element_blank(), axis.title = element_blank(), axis.text = element_blank())#
+ch.communes
+lake.df <- formatShp(readOGR(path.ch, layer = "lakes"))#
+country.df <- formatShp(readOGR(path.ch, layer = "country"))#
+ch.communes + geom_polygon(data = country.df, fill = NA, size = 0.15) + #
+  geom_polygon(data = lake.df, fill = alpha("lightgrey", alpha = 1), colour = alpha("lightgrey", alpha = 1))
+?alpha
+library(swiMap)
+?getShpLayers
+require(rgdal)#
+require(rgeos)#
+require(ggplot2)#
+path <- getPathShp('world')#
+layers <- getShpLayers(path)#
+# read shapefiles for given layer#
+world <- readOGR(path, layer = layers[1])#
+world.df <- formatShp(world)#
+# plot world map#
+ggplot(world.df, aes(x = long, y = lat, group = group)) + geom_polygon(size = 0.01, aes(fill = FIPS)) +#
+theme_minimal() + theme(legend.position = "none", panel.grid = element_blank(), axis.ticks = element_blank(), axis.title = element_blank(), axis.text = element_blank())#
+Same with swiss commune map (slow!)#
+## Not run: #
+path.ch <- getPathShp('CH')#
+ch <- readOGR(path.ch, layer = 'municipalities')#
+ch.df <- formatShp(ch)#
+# plot swiss commune map#
+ch.communes <- ggplot(ch.df, aes(x = long, y = lat, group = group)) + geom_polygon(size = 0.01, aes(fill = GEMNAME)) +#
+theme_minimal() + theme(legend.position = "none", panel.grid = element_blank(), axis.ticks = element_blank(), axis.title = element_blank(), axis.text = element_blank())#
+ch.communes
+lake.df <- formatShp(readOGR(path.ch, layer = "lakes"))#
+country.df <- formatShp(readOGR(path.ch, layer = "country"))
+ch.communes + geom_polygon(data = country.df, fill = NA, size = 0.15) + geom_polygon(data = lake.df, fill = alpha("lightgrey", alpha = 1), colour = alpha("lightgrey", alpha = 1))
+library(scales)
+ch.communes + geom_polygon(data = country.df, fill = NA, size = 0.15) + geom_polygon(data = lake.df, fill = alpha("lightgrey", alpha = 1), colour = alpha("lightgrey", alpha = 1))
+ch.communes + geom_polygon(data = country.df, fill = NA, size = 0.15) + geom_polygon(data = lake.df, fill = "lightgrey", colour = "lightgrey")
+ch.communes + geom_polygon(data = country.df, fill = NA, size = 1) + geom_polygon(data = lake.df, fill = "lightgrey", colour = "lightgrey")
+str(country.df)
+library(swiMap)
+?getShpLayers
+require(rgdal)#
+require(rgeos)#
+require(ggplot2)
+path.ch <- getPathShp('CH')#
+ch <- readOGR(path.ch, layer = 'municipalities')#
+ch.df <- formatShp(ch)#
+# plot swiss commune map#
+ch.communes <- ggplot(ch.df, aes(x = long, y = lat, group = group)) + geom_polygon(size = 0.01, aes(fill = GEMNAME)) +#
+theme_minimal() + theme(legend.position = "none", panel.grid = element_blank(), axis.ticks = element_blank(), axis.title = element_blank(), axis.text = element_blank())#
+ch.communes#
+# add the lake and country contours#
+lake.df <- formatShp(readOGR(path.ch, layer = "lakes"))#
+country.df <- formatShp(readOGR(path.ch, layer = "country"))#
+ch.communes + geom_polygon(data = country.df, fill = NA, color = "black", size = 2) + geom_polygon(data = lake.df, fill = "lightgrey", colour = "lightgrey")
+ch.communes + geom_polygon(data = lake.df, fill = "lightgrey", colour = "lightgrey")
+str(country.df)
+geom_polygon(data = country.df, fill = NA, color = "black", size = 2)
+ggplot() + geom_polygon(data = country.df, fill = NA, color = "black", size = 2)
+ggplot(aes(lon, lat)) + geom_polygon(data = country.df, fill = NA, color = "black", size = 2)
+ggplot(aes(x = long, y = lat, group = group)) +  geom_polygon(data = country.df, fill = NA, color = "black", size = 2)
+str(country.df)
+ggplot(data = country.df,aes(x = long, y = lat, group = group)) +  geom_polygon( fill = NA, color = "black", size = 2)
+ch.communes + geom_polygon(data = lake.df, fill = "lightgrey", colour = "lightgrey") + geom_polygon(data = country.df, fill = NA, color = "black", size = 2)
+str(ch.df)
+unique(ch.df$id)
+length(unique(ch.df$id))
+str(ch.df)
+length(unique(ch.df$GEMNAME))
+length(unique(ch.df$BFSNR))
+head(df.ch)
+head(ch.df)
+tail(ch.df)
+which(ch.df$GEMNAME == 'Aeugst am Albis')
+ch.df[which(ch.df$GEMNAME == 'Aeugst am Albis'),]
+ch.df[which(ch.df$GEMNAME == 'Knonau'),]
+length(unique(ch.df$BFSNR))
+length(unique(ch.df$GEMNAME))
+duplicated(ch.df$BFSNR)
+ch.df[!duplicated(ch.df$BFSNR),c('BFSNR', 'GEMNAME')]
+ch.df[!duplicated(ch.df$BFSNR),'BFSNR']
+order(ch.df[!duplicated(ch.df$BFSNR),'BFSNR'])
+ch.df[order(ch.df[!duplicated(ch.df$BFSNR),'BFSNR']), c('BFSNR', 'GEMNAME')]
+ch.df[sort(ch.df[!duplicated(ch.df$BFSNR),'BFSNR']), c('BFSNR', 'GEMNAME')]
+order(ch.df[!duplicated(ch.df$BFSNR),'BFSNR'])
+ch.df[!duplicated(ch.df$BFSNR),c('BFSNR', 'GEMNAME')]
+bfsnName <- ch.df[!duplicated(ch.df$BFSNR),c('BFSNR', 'GEMNAME')]
+bfsnName
+?order
+order(bfsnName[,1])
+bfsnName[order(bfsnName[,1]),]
+bfsnName <- ch.df[!duplicated(ch.df$BFSNR),c('BFSNR', 'GEMNAME')]
+bfsnName <- ch.df[!duplicated(ch.df$BFSNR),c('BFSNR', 'GEMNAME')]#
+str(bfsnName[order(bfsnName[,1]),])
+"GeoJSON" %in% ogrDrivers()$name
+library(rgdal)
+install.packages("rgeos", repos="http://R-Forge.R-project.org", type="source")
+install.packages('rgdal')
+install.packages('rgdal', type='source')
+library(rgdal)
+install.packages('rgdal', type='source')
+library(rgdal)
+install.packages('rgdal')
+install.packages('rgdal', type='source')
+library(rgdal)
+library(rgdal)
+library(swiMap)
+?getShpLayers
+require(rgdal)#
+require(rgeos)#
+require(ggplot2)#
+path <- getPathShp('world')#
+layers <- getShpLayers(path)#
+# read shapefiles for given layer#
+world <- readOGR(path, layer = layers[1])#
+world.df <- formatShp(world)#
+# plot world map#
+ggplot(world.df, aes(x = long, y = lat, group = group)) + geom_polygon(size = 0.01, aes(fill = FIPS)) +#
+theme_minimal() + theme(legend.position = "none", panel.grid = element_blank(), axis.ticks = element_blank(), axis.title = element_blank(), axis.text = element_blank())#
+Same with swiss commune map (slow!)#
+## Not run: #
+path.ch <- getPathShp('CH')#
+ch <- readOGR(path.ch, layer = 'municipalities')#
+ch.df <- formatShp(ch)#
+# plot swiss commune map#
+ch.communes <- ggplot(ch.df, aes(x = long, y = lat, group = group)) + geom_polygon(size = 0.01, aes(fill = GEMNAME)) +#
+theme_minimal() + theme(legend.position = "none", panel.grid = element_blank(), axis.ticks = element_blank(), axis.title = element_blank(), axis.text = element_blank())#
+ch.communes
+readOGR(file.path(path.ch, "ch-country.json"))
+ogrListLayers(file.path(path.ch, "ch-country.json"))
+setwd('/Users/nguyendu/Google Drive/swissinfo/2015_03_15_goldTrade')
+source("~/swissinfo/_helpers/helpers.R")#
+library(swiTheme)#
+library(dplyr)#
+#
+#############################################################################################
+###   SETTINGS#
+#############################################################################################
+#
+# the path to the data file with 1982-2014 data merged#
+mergedFile <- '/data/1982_2014_gold_bound-tsv.tsv'#
+datafile <- 'data/1982-bis-2013_E-copy-csv.tsv'#
+datafile_2014 <- 'data/2014_gold-xlsx.tsv'#
+#############################################################################################
+###   Load indicators#
+#############################################################################################
+#
+if(mergedFile != '') {#
+	data.read <- read.csv(datafile, sep ="\t", stringsAsFactors = F)#
+#
+	## remove empty rows#
+	data.read <- data.read[which(!data.read$trade == '' & !is.na(data.read$value)),]#
+#
+	## check 'total trade' partner is equal to the sum of all countries#
+#
+	invisible(by(data.read, list(data.read$Year, data.read$trade, data.read$type), function(dd) {#
+		if(!sum(dd[dd$Partner != 'Total Trade','value']) == dd[dd$Partner == 'Total Trade','value']) {#
+			print(paste("SUM:", sum(dd[dd$Partner != 'Total Trade','value']), "vs Total trade",#
+			dd[dd$Partner == 'Total Trade','value']))#
+		}#
+	}))#
+	# data without 'total trade'#
+	data <- dplyr::filter(data.read, Partner != 'Total Trade')#
+#
+	#####   Load the recent data file!! #############
+	data2.read <- read.csv(datafile_2014, sep ="\t", stringsAsFactors = F)#
+#
+	data <- rbind(data, data2.read)#
+	write.table(data, file = "data/1982_2014_gold_bound.tsv", sep = "\t", row.names = F)#
+#
+	### open google refine and cluster country names and saved it as mergedFile#
+} else {#
+	data <- read.csv(mergedFile, sep ="\t", stringsAsFactors = F)#
+}#
+# replace USSR & Russian Fed by <- "USSR/Russia"#
+data[which(data$Partner %in% c("USSR", "Russian Federation")),'Partner'] <- "USSR/Russia"#
+# compute the yearly total#
+by_ytt <- group_by(data, Year, trade, type)#
+data <- mutate(by_ytt, total = sum(value))#
+data.tot <- summarise(by_ytt, TotalTrade = sum(value))
+data.tot
+write.csv(data.tot, file="stat_douanes_or.csv", row.names =F)
+readOGR(file.path(path.ch, "ch-country.json"))
+ogrListLayers(file.path(path.ch, "ch-country.json"))
+readOGR(file.path(path.ch, "ch-country.json"), "GeoJSON")
+readOGR(file.path(path.ch, "ch-country.json"), "country")
+ogrListLayers(path.ch)
+ogrListLayers(path.ch)
+layers <-  ogrListLayers(path)
+layers

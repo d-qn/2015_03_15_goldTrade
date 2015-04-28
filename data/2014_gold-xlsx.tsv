@@ -1,0 +1,371 @@
+Year	Partner	trade	type	value
+2014.0	Andorra	import	KG	64.0
+2014.0	Andorra	import	CHF	198464.0
+2014.0	Argentina	import	KG	168447.0
+2014.0	Argentina	import	CHF	4.68614011E8
+2014.0	Armenia	import	KG	13.0
+2014.0	Armenia	import	CHF	372523.0
+2014.0	Armenia	export	KG	1888.0
+2014.0	Armenia	export	CHF	6.5399834E7
+2014.0	Australia	import	KG	176012.0
+2014.0	Australia	import	CHF	3.36289456E8
+2014.0	Australia	export	KG	18163.0
+2014.0	Australia	export	CHF	2.24496293E8
+2014.0	Austria	import	KG	44129.0
+2014.0	Austria	import	CHF	1.25012657E8
+2014.0	Austria	export	KG	16935.0
+2014.0	Austria	export	CHF	3.77192425E8
+2014.0	Azerbaijan	import	KG	2216.0
+2014.0	Azerbaijan	import	CHF	6.85335E7
+2014.0	Azerbaijan	export	KG	215.0
+2014.0	Azerbaijan	export	CHF	8158866.0
+2014.0	Belarus	import	KG	257.0
+2014.0	Belarus	import	CHF	1.0058278E7
+2014.0	Belarus	export	KG	255.0
+2014.0	Belarus	export	CHF	9800453.0
+2014.0	Belgium	import	KG	241064.0
+2014.0	Belgium	import	CHF	5.04309124E8
+2014.0	Belgium	export	KG	727.0
+2014.0	Belgium	export	CHF	2.6240172E7
+2014.0	Benin	import	KG	2324.0
+2014.0	Benin	import	CHF	7.9177E7
+2014.0	Bolivia the Plurinational State of	import	KG	48160.0
+2014.0	Bolivia the Plurinational State of	import	CHF	5.4990949E7
+2014.0	Brazil	import	KG	23594.0
+2014.0	Brazil	import	CHF	7.22465726E8
+2014.0	Brunei Darussalam	export	KG	90.0
+2014.0	Brunei Darussalam	export	CHF	407566.0
+2014.0	Bulgaria Republic of	import	KG	1760.0
+2014.0	Bulgaria Republic of	import	CHF	3100485.0
+2014.0	Bulgaria Republic of	export	KG	105.0
+2014.0	Bulgaria Republic of	export	CHF	3801063.0
+2014.0	Burkina Faso	import	KG	37372.0
+2014.0	Burkina Faso	import	CHF	1.207797457E9
+2014.0	Cameroon	import	KG	101.0
+2014.0	Cameroon	import	CHF	3323724.0
+2014.0	Canada	import	KG	26243.0
+2014.0	Canada	import	CHF	8.08663392E8
+2014.0	Canada	export	KG	3437.0
+2014.0	Canada	export	CHF	1.00086679E8
+2014.0	Chile	import	KG	203427.0
+2014.0	Chile	import	CHF	7.23444972E8
+2014.0	China People's Republic of	import	KG	4731.0
+2014.0	China People's Republic of	import	CHF	1152202.0
+2014.0	China People's Republic of	export	KG	213271.0
+2014.0	China People's Republic of	export	CHF	7.975068812E9
+2014.0	Colombia	import	KG	14386.0
+2014.0	Colombia	import	CHF	4.22543587E8
+2014.0	Cook Islands	export	KG	4.0
+2014.0	Cook Islands	export	CHF	1895.0
+2014.0	Costa Rica	import	KG	1.0
+2014.0	Costa Rica	import	CHF	2038.0
+2014.0	Costa Rica	export	KG	0.0
+2014.0	Costa Rica	export	CHF	2001.0
+2014.0	Croatia Republic of	import	KG	0.0
+2014.0	Croatia Republic of	import	CHF	5700.0
+2014.0	Croatia Republic of	export	KG	11.0
+2014.0	Croatia Republic of	export	CHF	276597.0
+2014.0	Cuba	import	KG	55.0
+2014.0	Cuba	import	CHF	1833508.0
+2014.0	Curaçao	import	KG	14150.0
+2014.0	Curaçao	import	CHF	4.56272659E8
+2014.0	Curaçao	export	KG	5.0
+2014.0	Curaçao	export	CHF	201378.0
+2014.0	Cyprus	import	KG	10.0
+2014.0	Cyprus	import	CHF	1327.0
+2014.0	Czech Republic	import	KG	931.0
+2014.0	Czech Republic	import	CHF	2.1474816E7
+2014.0	Czech Republic	export	KG	1894.0
+2014.0	Czech Republic	export	CHF	3.1755275E7
+2014.0	Côte d'Ivoire	import	KG	11844.0
+2014.0	Côte d'Ivoire	import	CHF	3.80505616E8
+2014.0	Denmark	export	KG	70.0
+2014.0	Denmark	export	CHF	11014.0
+2014.0	Dominican Republic	import	KG	29923.0
+2014.0	Dominican Republic	import	CHF	2.07333497E8
+2014.0	Ecuador	import	KG	2192.0
+2014.0	Ecuador	import	CHF	5.7321225E7
+2014.0	Egypt	import	KG	81.0
+2014.0	Egypt	import	CHF	2847758.0
+2014.0	Egypt	export	KG	5279.0
+2014.0	Egypt	export	CHF	1.98249286E8
+2014.0	Estonia	import	KG	4.0
+2014.0	Estonia	import	CHF	1172.0
+2014.0	Estonia	export	KG	1029.0
+2014.0	Estonia	export	CHF	3.66483E7
+2014.0	Ethiopia Fed. Democratic Republic of	import	KG	6996.0
+2014.0	Ethiopia Fed. Democratic Republic of	import	CHF	2.24928719E8
+2014.0	Finland	import	KG	9684.0
+2014.0	Finland	import	CHF	3.60956399E8
+2014.0	Finland	export	KG	404.0
+2014.0	Finland	export	CHF	1.4134609E7
+2014.0	France	import	KG	53784.0
+2014.0	France	import	CHF	1.489501692E9
+2014.0	France	export	KG	168539.0
+2014.0	France	export	CHF	1.479266396E9
+2014.0	French Guiana	import	KG	309.0
+2014.0	French Guiana	import	CHF	1.0702948E7
+2014.0	Gabon	import	KG	1085.0
+2014.0	Gabon	import	CHF	3.7248537E7
+2014.0	Georgia	export	KG	10.0
+2014.0	Georgia	export	CHF	5967.0
+2014.0	Germany	import	KG	151041.0
+2014.0	Germany	import	CHF	2.630923755E9
+2014.0	Germany	export	KG	254727.0
+2014.0	Germany	export	CHF	3.489298403E9
+2014.0	Ghana	import	KG	47101.0
+2014.0	Ghana	import	CHF	1.511251508E9
+2014.0	Greece	import	KG	50.0
+2014.0	Greece	import	CHF	1622240.0
+2014.0	Greece	export	KG	113.0
+2014.0	Greece	export	CHF	4217619.0
+2014.0	Guinea	import	KG	1212.0
+2014.0	Guinea	import	CHF	3.9906032E7
+2014.0	Holy See	import	KG	0.0
+2014.0	Holy See	import	CHF	1662.0
+2014.0	Holy See	export	KG	30.0
+2014.0	Holy See	export	CHF	1126618.0
+2014.0	Hong Kong	import	KG	15803.0
+2014.0	Hong Kong	import	CHF	4.26776293E8
+2014.0	Hong Kong	export	KG	382471.0
+2014.0	Hong Kong	export	CHF	1.4038827237E10
+2014.0	Hungary	import	KG	841.0
+2014.0	Hungary	import	CHF	1.6341218E7
+2014.0	Hungary	export	KG	13.0
+2014.0	Hungary	export	CHF	26292.0
+2014.0	India	import	KG	2204.0
+2014.0	India	import	CHF	1.2611863E7
+2014.0	India	export	KG	651390.0
+2014.0	India	export	CHF	1.7655444622E10
+2014.0	Indonesia	import	KG	251.0
+2014.0	Indonesia	import	CHF	9435029.0
+2014.0	Iran Islamic Republic of	export	KG	6389.0
+2014.0	Iran Islamic Republic of	export	CHF	2.425E8
+2014.0	Ireland	import	KG	29.0
+2014.0	Ireland	import	CHF	1035134.0
+2014.0	Ireland	export	KG	25.0
+2014.0	Ireland	export	CHF	886627.0
+2014.0	Israel	import	KG	707.0
+2014.0	Israel	import	CHF	2.0948635E7
+2014.0	Israel	export	KG	24.0
+2014.0	Israel	export	CHF	884583.0
+2014.0	Italy	import	KG	138594.0
+2014.0	Italy	import	CHF	2.617976192E9
+2014.0	Italy	export	KG	147697.0
+2014.0	Italy	export	CHF	1.683459194E9
+2014.0	Japan	import	KG	5780.0
+2014.0	Japan	import	CHF	2.16420116E8
+2014.0	Japan	export	KG	1332.0
+2014.0	Japan	export	CHF	4.3811124E7
+2014.0	Jordan	import	KG	24.0
+2014.0	Jordan	import	CHF	925542.0
+2014.0	Jordan	export	KG	10017.0
+2014.0	Jordan	export	CHF	3.61200208E8
+2014.0	Kazakhstan	import	KG	300860.0
+2014.0	Kazakhstan	import	CHF	1.99114456E8
+2014.0	Kazakhstan	export	KG	10.0
+2014.0	Kazakhstan	export	CHF	24301.0
+2014.0	Korea Republic of	import	KG	341.0
+2014.0	Korea Republic of	import	CHF	1.2340659E7
+2014.0	Korea Republic of	export	KG	7918.0
+2014.0	Korea Republic of	export	CHF	2.90716647E8
+2014.0	Kuwait	export	KG	123.0
+2014.0	Kuwait	export	CHF	8015.0
+2014.0	Kyrgyz Republic	import	KG	12863.0
+2014.0	Kyrgyz Republic	import	CHF	3.89264817E8
+2014.0	Lao People's Democratic Republic	export	KG	180.0
+2014.0	Lao People's Democratic Republic	export	CHF	6640559.0
+2014.0	Latvia	import	KG	13.0
+2014.0	Latvia	import	CHF	157422.0
+2014.0	Latvia	export	KG	38.0
+2014.0	Latvia	export	CHF	150281.0
+2014.0	Lebanon	import	KG	4795.0
+2014.0	Lebanon	import	CHF	6.7527238E7
+2014.0	Lebanon	export	KG	8474.0
+2014.0	Lebanon	export	CHF	2.3818891E8
+2014.0	Lithuania	export	KG	15.0
+2014.0	Lithuania	export	CHF	57490.0
+2014.0	Luxembourg	import	KG	8562.0
+2014.0	Luxembourg	import	CHF	3.23281244E8
+2014.0	Luxembourg	export	KG	1288.0
+2014.0	Luxembourg	export	CHF	4.7698075E7
+2014.0	Macau	import	KG	1.0
+2014.0	Macau	import	CHF	444.0
+2014.0	Macau	export	KG	1112.0
+2014.0	Macau	export	CHF	147295.0
+2014.0	Macedonia	import	KG	3138.0
+2014.0	Macedonia	import	CHF	315310.0
+2014.0	Malawi	import	KG	1.0
+2014.0	Malawi	import	CHF	479.0
+2014.0	Malaysia	import	KG	1450.0
+2014.0	Malaysia	import	CHF	4.8452752E7
+2014.0	Malaysia	export	KG	24287.0
+2014.0	Malaysia	export	CHF	8.50774503E8
+2014.0	Mali	import	KG	7663.0
+2014.0	Mali	import	CHF	2.58972717E8
+2014.0	Malta	export	KG	150.0
+2014.0	Malta	export	CHF	98536.0
+2014.0	Mauritania	import	KG	9062.0
+2014.0	Mauritania	import	CHF	3.08954643E8
+2014.0	Mauritius	export	KG	1.0
+2014.0	Mauritius	export	CHF	1705.0
+2014.0	Mexico	import	KG	20796.0
+2014.0	Mexico	import	CHF	5.9435893E8
+2014.0	Mongolia	import	KG	11174.0
+2014.0	Mongolia	import	CHF	3.81756981E8
+2014.0	Mongolia	export	KG	382.0
+2014.0	Mongolia	export	CHF	102226.0
+2014.0	Morocco	import	KG	88101.0
+2014.0	Morocco	import	CHF	6.3497406E7
+2014.0	Mozambique	import	KG	670.0
+2014.0	Mozambique	import	CHF	1.7336159E7
+2014.0	Nepal Federal Democratic Rep.	export	KG	66200.0
+2014.0	Nepal Federal Democratic Rep.	export	CHF	3.5722841E7
+2014.0	Netherlands	import	KG	239.0
+2014.0	Netherlands	import	CHF	2244748.0
+2014.0	Netherlands	export	KG	641.0
+2014.0	Netherlands	export	CHF	2017400.0
+2014.0	New Zealand	import	KG	30.0
+2014.0	New Zealand	import	CHF	37105.0
+2014.0	New Zealand	export	KG	396.0
+2014.0	New Zealand	export	CHF	9743692.0
+2014.0	Niger	import	KG	656.0
+2014.0	Niger	import	CHF	2.154873E7
+2014.0	Nigeria Federal Republic of	import	KG	83.0
+2014.0	Nigeria Federal Republic of	import	CHF	2731039.0
+2014.0	Norway	import	KG	2154.0
+2014.0	Norway	import	CHF	8.0420039E7
+2014.0	Norway	export	KG	1.0
+2014.0	Norway	export	CHF	2456.0
+2014.0	Oman	export	KG	20.0
+2014.0	Oman	export	CHF	748480.0
+2014.0	Palau	export	KG	1.0
+2014.0	Palau	export	CHF	413.0
+2014.0	Panama	import	KG	1640.0
+2014.0	Panama	import	CHF	4.9337268E7
+2014.0	Panama	export	KG	48.0
+2014.0	Panama	export	CHF	2285952.0
+2014.0	Peru	import	KG	133018.0
+2014.0	Peru	import	CHF	2.363983133E9
+2014.0	Philippines	import	KG	15819.0
+2014.0	Philippines	import	CHF	2.47307984E8
+2014.0	Poland	import	KG	4494.0
+2014.0	Poland	import	CHF	1601095.0
+2014.0	Poland	export	KG	72.0
+2014.0	Poland	export	CHF	2257347.0
+2014.0	Portugal	import	KG	33.0
+2014.0	Portugal	import	CHF	509394.0
+2014.0	Portugal	export	KG	95.0
+2014.0	Portugal	export	CHF	1329177.0
+2014.0	Qatar	import	KG	0.0
+2014.0	Qatar	import	CHF	10910.0
+2014.0	Romania	import	KG	75.0
+2014.0	Romania	import	CHF	1801724.0
+2014.0	Romania	export	KG	12.0
+2014.0	Romania	export	CHF	456618.0
+2014.0	Russian Federation	import	KG	70787.0
+2014.0	Russian Federation	import	CHF	2.209406732E9
+2014.0	Russian Federation	export	KG	4860.0
+2014.0	Russian Federation	export	CHF	1.0376405E8
+2014.0	Saudi Arabia	import	KG	2052.0
+2014.0	Saudi Arabia	import	CHF	2.5364617E7
+2014.0	Saudi Arabia	export	KG	63290.0
+2014.0	Saudi Arabia	export	CHF	2.257988822E9
+2014.0	Senegal	import	KG	7791.0
+2014.0	Senegal	import	CHF	2.48033293E8
+2014.0	Serbia	import	KG	2140.0
+2014.0	Serbia	import	CHF	1170043.0
+2014.0	Serbia	export	KG	3.0
+2014.0	Serbia	export	CHF	240.0
+2014.0	Seychelles Republic of	import	KG	1.0
+2014.0	Seychelles Republic of	import	CHF	37717.0
+2014.0	Seychelles Republic of	export	KG	1.0
+2014.0	Seychelles Republic of	export	CHF	37716.0
+2014.0	Singapore	import	KG	7221.0
+2014.0	Singapore	import	CHF	2.27967904E8
+2014.0	Singapore	export	KG	153744.0
+2014.0	Singapore	export	CHF	5.023122426E9
+2014.0	Slovakia	import	KG	15.0
+2014.0	Slovakia	import	CHF	3539.0
+2014.0	Slovakia	export	KG	11.0
+2014.0	Slovakia	export	CHF	418099.0
+2014.0	Slovenia	import	KG	36.0
+2014.0	Slovenia	import	CHF	259407.0
+2014.0	Slovenia	export	KG	26.0
+2014.0	Slovenia	export	CHF	873913.0
+2014.0	South Africa	import	KG	48683.0
+2014.0	South Africa	import	CHF	1.621812881E9
+2014.0	South Africa	export	KG	200.0
+2014.0	South Africa	export	CHF	7487092.0
+2014.0	Spain	import	KG	75786.0
+2014.0	Spain	import	CHF	2.39330986E8
+2014.0	Spain	export	KG	2080.0
+2014.0	Spain	export	CHF	2.4269905E7
+2014.0	Sri Lanka	import	KG	737.0
+2014.0	Sri Lanka	import	CHF	2.7408496E7
+2014.0	Sri Lanka	export	KG	151.0
+2014.0	Sri Lanka	export	CHF	5500917.0
+2014.0	Sudan	import	KG	39.0
+2014.0	Sudan	import	CHF	1199910.0
+2014.0	Suriname	import	KG	11868.0
+2014.0	Suriname	import	CHF	3.95902458E8
+2014.0	Sweden	import	KG	9715.0
+2014.0	Sweden	import	CHF	3.74985254E8
+2014.0	Sweden	export	KG	1624.0
+2014.0	Sweden	export	CHF	1686248.0
+2014.0	Taiwan	import	KG	31.0
+2014.0	Taiwan	import	CHF	3140.0
+2014.0	Taiwan	export	KG	16373.0
+2014.0	Taiwan	export	CHF	2.39327819E8
+2014.0	Tajikistan	import	KG	4053.0
+2014.0	Tajikistan	import	CHF	1.11345952E8
+2014.0	Tajikistan	export	KG	2854.0
+2014.0	Tajikistan	export	CHF	1.03050972E8
+2014.0	Tanzania United Republic of	import	KG	3994.0
+2014.0	Tanzania United Republic of	import	CHF	1.20395674E8
+2014.0	Thailand	import	KG	22691.0
+2014.0	Thailand	import	CHF	8.40159895E8
+2014.0	Thailand	export	KG	208632.0
+2014.0	Thailand	export	CHF	1.748369715E9
+2014.0	Togo	import	KG	6904.0
+2014.0	Togo	import	CHF	2.33082654E8
+2014.0	Tunisia	export	KG	205.0
+2014.0	Tunisia	export	CHF	7747444.0
+2014.0	Turkey	import	KG	52563.0
+2014.0	Turkey	import	CHF	2.000323422E9
+2014.0	Turkey	export	KG	177128.0
+2014.0	Turkey	export	CHF	2.514252166E9
+2014.0	Uganda	import	KG	35.0
+2014.0	Uganda	import	CHF	1755.0
+2014.0	Ukraine	import	KG	3171.0
+2014.0	Ukraine	import	CHF	1.12949088E8
+2014.0	Ukraine	export	KG	3211.0
+2014.0	Ukraine	export	CHF	9.9770868E7
+2014.0	United Arab Emirates	import	KG	63997.0
+2014.0	United Arab Emirates	import	CHF	2.396321539E9
+2014.0	United Arab Emirates	export	KG	88449.0
+2014.0	United Arab Emirates	export	CHF	2.47755204E9
+2014.0	United Kingdom	import	KG	676205.0
+2014.0	United Kingdom	import	CHF	2.395745093E10
+2014.0	United Kingdom	export	KG	1189819.0
+2014.0	United Kingdom	export	CHF	1.799493381E9
+2014.0	United States of America	import	KG	236838.0
+2014.0	United States of America	import	CHF	7.302830601E9
+2014.0	United States of America	export	KG	14758.0
+2014.0	United States of America	export	CHF	4.61958815E8
+2014.0	Uruguay	import	KG	3149.0
+2014.0	Uruguay	import	CHF	6.5459264E7
+2014.0	Uruguay	export	KG	436.0
+2014.0	Uruguay	export	CHF	3039392.0
+2014.0	Uzbekistan	import	KG	31533.0
+2014.0	Uzbekistan	import	CHF	1.221199658E9
+2014.0	Venezuela the Bolivarian Republic of	import	KG	28347.0
+2014.0	Venezuela the Bolivarian Republic of	import	CHF	4.58604816E8
+2014.0	Venezuela the Bolivarian Republic of	export	KG	200.0
+2014.0	Venezuela the Bolivarian Republic of	export	CHF	2454678.0
+2014.0	Viet Nam Socialist Republic of	import	KG	130.0
+2014.0	Viet Nam Socialist Republic of	import	CHF	3251638.0
+2014.0	Viet Nam Socialist Republic of	export	KG	430.0
+2014.0	Viet Nam Socialist Republic of	export	CHF	1304893.0
+2014.0	Zambia	import	KG	50.0
+2014.0	Zambia	import	CHF	1291468.0
